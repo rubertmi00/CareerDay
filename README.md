@@ -1,25 +1,23 @@
 # Career Day Sorter
-A modular sorter for students in Career Day. Can be used for a large variety of functions.
+A modular sorter for students in Career Day. Can be used for a large variety of functions/events.
 
-#Updating the .app file
-Simply just change the jar in the app. Make sure you don't change the main class name.
-if you change something for launch, make sure to reflect those changes in the .cfg file or info.plist
+The schedule is generated as follows:
+1. Sessions are ranked by popularity, and more popular Sessions are assigned to larger Classrooms.
+2. Students who have submitted requests are ranked by their Priority.
+    - Priority is determined by the time they submitted their requests, their grade level, and, in later rounds, their    
+      Contentedness.
+          - Contentedness is a value resulting from a calculation which compares the Student's requests with what Sessions 
+	    they've been assigned to thus far, so that if they miss out on one of their top choices during the first period, 
+	    they will be slightly more likely to get it later in the day.
+3. Students are placed, in rank order, into their highest choice Session which still has seats available, and which they 
+   haven't already seen.
+4. Students who did not submit any requests for Career Day are then randomly placed in Sessions which have not been filled 
+   above a decided-upon minimum capacity.
+5. If, at this point, every Student in the school has been assigned all their Sessions, and there are still Sessions below their minimum capacity, Students with the lowest Priority are then reassigned from their current Session into one that is below minimum capacity.
 
+Overall Avg. Student Contentedness varied between 90%-95% across multiple different sample inputs.
 
-# NOTES FOR DEVS
-- Please don't touch .gitignore and other technical files.
-- accurately comment on your commits
--  Be careful when submitting changes. Usually its best to branch. 
-	- When in doubt, ask Tom
-    
-<strong>GITHUB FLOW FOR DEVS</strong>
-
-- look at the projects tab for things to get done. 
-- if reporting a bug or putting something to do, use the ISSUES tab
-- look for issues assigned to you.
-- before merging, tom must review the code first.
-
-<h1>an app by Hills ATCS</h1>
+<h1>An app by Hills ATCS</h1>
 <h2>Credits</h2>
 
 * Admin Team
@@ -27,9 +25,9 @@ if you change something for launch, make sure to reflect those changes in the .c
     - Tom Varano
 	
 * Logic Team
+    - Michael Ruberto
     - Bennett Bierman
     - Josh Kent
-    - Michael Ruberto
 	
 * Information Team
     - Liam Landau
