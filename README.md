@@ -6,9 +6,9 @@ The schedule is generated as follows:
 2. Students who have submitted requests are ranked by their Priority.
     - Priority is determined by the time they submitted their requests, their grade level, and, in later rounds, their    
       Contentedness.
-          - Contentedness is a value resulting from a calculation which compares the Student's requests with what Sessions 
-	    they've been assigned to thus far, so that if they miss out on one of their top choices during the first period, 
-	    they will be slightly more likely to get it later in the day.
+    - Contentedness is a value resulting from a calculation which compares the Student's requests with what Sessions
+    they've been assigned to thus far, so that if they miss out on one of their top choices during the first period,
+    they will be slightly more likely to get it later in the day.
 3. Students are placed, in rank order, into their highest choice Session which still has seats available, and which they 
    haven't already seen.
 4. Students who did not submit any requests for Career Day are then randomly placed in Sessions which have not been filled 
